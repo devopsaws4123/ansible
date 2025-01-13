@@ -1,5 +1,6 @@
 - name: packeage
   hosts: web
+  become: yes
   tasks: 
   - name: install httpd package
     ansible.builtin.package:
