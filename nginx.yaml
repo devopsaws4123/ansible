@@ -11,3 +11,8 @@
       name: nginx
       state: started
       enabled: yes
+      register: result
+
+  - name: Show result
+    debug:
+      msg: "{{ result }}"
