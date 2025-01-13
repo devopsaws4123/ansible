@@ -8,6 +8,6 @@
       state: latest
   - name: service starting
     ansible.builtin.service:
-      name: httpd
+      name: httpd.service
       state: started
       enabled: yes
