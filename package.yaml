@@ -1,0 +1,11 @@
+- name: packeage
+  hosts: web
+  tasks: 
+  - name: install httpd package
+    ansible.builtin.package:
+      name: httpd
+      state: present
+  - name: service starting
+    ansible.builtin.service:
+      name: httpd
+      state: started

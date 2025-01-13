@@ -3,3 +3,5 @@
   tasks:
   - name: ping the server
     ansible.builtin.ping:
+  - name: installing httpd
+    
