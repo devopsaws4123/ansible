@@ -5,7 +5,7 @@
   - name: install httpd package
     ansible.builtin.package:
       name: httpd
-      state: present
+      state: latest
   - name: service starting
     ansible.builtin.service:
       name: httpd
