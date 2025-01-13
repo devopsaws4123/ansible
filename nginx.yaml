@@ -11,9 +11,6 @@
       name: nginx
       state: started
       enabled: yes
-  - name: Gathering service facts
-    service_facts:
-
   - name: Get facts
     debug:
       msg: "{{ ansible_facts.services['nginx'].status }}"
