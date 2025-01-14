@@ -1,12 +1,12 @@
 - name: varaible
   hosts: local
   connection: local
-  tasks:
-  - name: printing data from prompt
-    vars_prompt:
+  vars_prompt:
     - name: VAR2
       prompt: enter username
     - name: TASK1
       prompt: enter password
-      ansible.builtin.debug:
-        msg: "{{ VAR2 }} {{ TASK1 }}"
+  tasks:
+  - name: printing data from prompt
+    ansible.builtin.debug:
+      msg: "{{ VAR2 }} {{ TASK1 }}"
