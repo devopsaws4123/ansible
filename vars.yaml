@@ -1,0 +1,7 @@
+- name: varaible
+  hosts: local
+  connection: local
+  tasks: variable print
+  - name: print first line 
+    ansible.builtin.debug:
+      msg: "hello from first task"
