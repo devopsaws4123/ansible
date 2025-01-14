@@ -9,7 +9,7 @@
     ansible.builtin.debug:
       msg: "{{ VAR1 }} {{ TASK }}"
 
-  - name: printing second line
+  - name: 
     vars_prompt:
     - name: VAR2
       prompt: enter username
