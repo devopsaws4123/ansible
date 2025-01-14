@@ -10,8 +10,10 @@
       msg: "{{ VAR1 }} {{ TASK }}"
 
   - name: print second line
-    vars:
-      VAR2: "hellow from second task"
-      TASK1: task  
+    vars_prompt:
+    - name: VAR2
+      prompt: enter username
+    - name: TASK1
+      prompt: enter password
     ansible.builtin.debug:
       msg: "{{ VAR2 }} {{ TASK1 }}"
