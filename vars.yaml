@@ -8,3 +8,10 @@
   - name: print first line 
     ansible.builtin.debug:
       msg: "{{ VAR1 }} {{ TASK }}"
+
+  - name: print second line
+    vars:
+      VAR2: "hellow from second task"
+      TASK1: task  
+    ansible.builtin.debug:
+      msg: "{{ VAR2 }} {{ TASK1 }}"
