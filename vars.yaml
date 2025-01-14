@@ -4,8 +4,10 @@
   vars_prompt:
     - name: VAR2
       prompt: enter username
+      private: false
     - name: TASK1
       prompt: enter password
+      private: false
   tasks:
   - name: printing data from prompt
     ansible.builtin.debug:
