@@ -1,7 +1,10 @@
 - name: varaible
   hosts: local
   connection: local
+  vars:
+    VAR1: "Hello From First"
+    TASK: Task
   tasks:
   - name: print first line 
     ansible.builtin.debug:
-      msg: "hello from first task"
+      msg: "{{ VAR1 }} {{ TASK }}"
