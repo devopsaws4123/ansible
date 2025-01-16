@@ -2,4 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  
+  - name: enter user name
+    prompt: Enter Your Name
+  - name: enter password
+    prompt: Enter Your password
