@@ -3,5 +3,5 @@
   connection: local
   tasks:
   - name: taking variables from inventory file
-    ansible.buiultin.debug:
+    ansible.builtin.debug:
       msg: "my name is {{ NAME }} and surname is {{ SURNAME }}"
