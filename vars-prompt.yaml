@@ -1,0 +1,5 @@
+- name: taking values from user end
+  hosts: local
+  connection: local
+  tasks:
+  
