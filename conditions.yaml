@@ -5,7 +5,7 @@
     - name: VALUE
       prompt: enter a value
   vars:
-    my_number: {{ VALUE }}
+    my_number: "{{ VALUE }}"
   tasks: 
   - name: print greater than value
     ansible.builtin.debug:
