@@ -1,9 +1,8 @@
 - name: Printing high value
   hosts: local
   connection: local
-  vars_prompt:
-    - name: VALUE
-      prompt: enter a value
+  vars:
+    VALUE: 20
   tasks: 
   - name: print greater than value
     ansible.builtin.debug:
