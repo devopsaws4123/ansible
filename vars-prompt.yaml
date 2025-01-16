@@ -1,8 +1,13 @@
 - name: taking values from user end
   hosts: local
   connection: local
-  tasks:
-  - name: enter user name
+  vars_prompt:
+  - name: NAME
     prompt: Enter Your Name
-  - name: enter password
+  - name: PASSWORD
     prompt: Enter Your password
+  tasks:
+  - name: printing the value
+    ansible.builtin.debug:
+      msg: "your name is {{ NAME }} and password is {{ PASSWORD }}"
+  
