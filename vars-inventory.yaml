@@ -1,0 +1,7 @@
+- name: Taking Values From Inventory
+  hosts: local
+  connection: local
+  tasks:
+  - name: taking variables from inventory file
+    ansible.buiultin.debug:
+      msg: "my name is {{ NAME }} and surname is {{ SURNAME }}"
