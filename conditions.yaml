@@ -4,15 +4,13 @@
   vars_prompt:
     - name: VALUE
       prompt: enter a value
-  vars:
-    my_number: "{{ VALUE }}"
   tasks: 
   - name: print greater than value
     ansible.builtin.debug:
-      msg: "value {{ my_number }} is greater than 10"
-    when: my_number > 10
+      msg: "value {{ VALUE }} is greater than 10"
+    when: VALUE > 10
 
   - name: print less than or equal value
     ansible.builtin.debug:
-      msg: "value {{ my_number }} is less than 10 or equal to 10"
-    when: my_number <= 10
+      msg: "value {{ VALUE }} is less than 10 or equal to 10"
+    when: VALUE <= 10
