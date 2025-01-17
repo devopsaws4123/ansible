@@ -9,3 +9,8 @@
     ansible.builtin.debug:
       msg: "your name is {{ NAME }}"
     when: NAME == "prakash"
+
+  - name: print error msg if user entered wrong username
+    ansible.builtin.debug:
+      msg: "you entered wrong username {{ NAME }}"
+    when: NAME != "prakash"
