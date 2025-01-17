@@ -8,3 +8,6 @@
   - name: printing
     ansible.builtin.debug:
       msg: "{{ result }}"
+
+  - name: testing shell command
+    ansible.builtin.command: ls -ltr /home/ec2-user/ansible
