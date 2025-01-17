@@ -1,0 +1,9 @@
+- name: function
+  hosts: local
+  connection: local
+  tasks:
+  - name: function
+    vars:
+      name: prakash
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
