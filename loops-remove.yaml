@@ -5,8 +5,8 @@
   tasks:
   - name: install and uninstall packages
     ansible.builtin.package:
-      name: 
-      state:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
     - {name='git' state='absent'}
     - {name='httpd' state='absent'}
