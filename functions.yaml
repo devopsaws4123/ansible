@@ -7,3 +7,6 @@
       name: prakash
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
+
+  - name: min and max number
+      

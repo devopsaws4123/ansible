@@ -1,0 +1,7 @@
+- name: shell and command module
+  hosts: local
+  connection: local
+  tasks:
+  - name: testing shell command
+    ansible.builtin.shell: ls -ltr /home/ec2-user/ansible
+    
