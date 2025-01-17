@@ -3,7 +3,7 @@
   connection: local
   vars_prompt:
     - name: NAME
-    prompt: Enter your name
+      prompt: Enter your name
   tasks:
   - name: print name
     ansible.builtin.debug:
