@@ -4,4 +4,6 @@
   tasks:
   - name: testing shell command
     ansible.builtin.shell: ls -ltr /home/ec2-user/ansible
-    
+    register: result
+    ansible.buultin.debug:
+      msg: "{{ result }}"
