@@ -1,10 +1,11 @@
 - name: print name
   hosts: local
   connection: local
-  vars:
-    NAME: prakash
+  vars_prompt:
+    - name: NAME
+    prompt: Enter your name
   tasks:
   - name: print name
     ansible.builtin.debug:
-      msg: "My name is {{ NAME }}"
+      msg: "your name is {{ NAME }}"
     when: NAME == "prakash"
