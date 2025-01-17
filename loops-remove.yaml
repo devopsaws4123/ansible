@@ -4,7 +4,7 @@
   become: yes
   tasks:
   - name: install and uninstall packages
-    ansible.builtin.paxckage:
+    ansible.builtin.package:
       name: 
       state:
     loop:
