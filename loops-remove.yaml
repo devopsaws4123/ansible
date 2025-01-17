@@ -1,0 +1,14 @@
+- name: install and uninstall packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install and uninstall packages
+    ansible.builtin.paxckage:
+      name: 
+      state:
+    loop:
+    - {name='git' state='absent'}
+    - {name='httpd' state='absent'}
+    - {name='nginx' state='absent'}
+    - {name='mysql' state='absent'}
