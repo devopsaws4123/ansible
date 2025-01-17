@@ -10,4 +10,7 @@
       msg: "{{ result }}"
 
   - name: testing shell command
-    ansible.builtin.command: ls -ltr /home/ec2-user/ansible
+    ansible.builtin.command: ls /home/ec2-user/ansible
+    register: result1
+    ansible.builtin.debug:
+      msg: "{{ result1 }}"
