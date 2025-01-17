@@ -1,0 +1,6 @@
+- name: delete a file
+  hosts: local
+  connection: local
+  tasks:
+  - name: creating a file
+    ansible.builtin.command: touch /home/ec2-user/test.txt
