@@ -1,0 +1,15 @@
+- name: install nginx
+  hosts: local
+  connection: local
+  tasks:
+  - name: install nginx if os equal to RedHat
+    ansible.builtin.dnf:
+      name: nginx
+      state: latest
+    when: ansible_os_familey == "RedHat"
+
+  - name: service start and enable
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
