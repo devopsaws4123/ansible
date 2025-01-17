@@ -12,5 +12,7 @@
   - name: testing shell command
     ansible.builtin.command: ls /home/ec2-user/ansible
     register: result1
+  
+  - name: printing command result
     ansible.builtin.debug:
       msg: "{{ result1 }}"
