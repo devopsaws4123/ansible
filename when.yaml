@@ -1,0 +1,10 @@
+- name: print name
+  hosts: local
+  connection: local
+  vars:
+    NAME: prakash
+  tasks:
+  - name: print name
+    ansible.builtin.debug:
+      msg: "My name is {{ NAME }}"
+    when: NAME == "prakash"
