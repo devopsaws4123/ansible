@@ -19,6 +19,7 @@
       executable: pip3.3
     loop:
     - pip
+    - pip3.3
     - botocore
     - boto3
   - name: create ec2 instance
