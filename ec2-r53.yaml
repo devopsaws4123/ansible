@@ -33,6 +33,6 @@
 
   - name: print ec2 info
     ansible.builtin.debug:
-      msg: "{{ item.instance }}"
+      msg: "{{ item.instances }}"
     loop: "{{ ec2_info.results}}"
 
