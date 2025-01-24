@@ -8,6 +8,7 @@
     vpc_id: vpc-0bad1db2654f40862
     subnet_id: subnet-04965604c2a51a1a1
     instance_type: t2.micro
+    region: us-east-1
     instances:
     - mysql
     - backend
@@ -27,5 +28,6 @@
       instance_type: "{{ instance_type }}"
       image_id: "{{ ami_id }}"
       security_group: "{{ sg_id }}"
+      region: "{{ region }}"
     loop: "{{ instances }}"
 
