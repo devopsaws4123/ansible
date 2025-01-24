@@ -13,6 +13,13 @@
     - backend
     - frontend
   tasks:
+  - name: install dependices
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.3
+    loop:
+    - botocore
+    - boto3
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
