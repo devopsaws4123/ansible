@@ -18,6 +18,7 @@
       name: "{{ item }}"
       executable: pip3.3
     loop:
+    - pip
     - botocore
     - boto3
   - name: create ec2 instance
