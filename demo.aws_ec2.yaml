@@ -2,6 +2,11 @@ plugin: amazon.aws.aws_ec2
 regions:
 - us-east-1
 - name: private-ip-address
+
+filters:
+  tag:Name: ansible
+  instance-state-name : running
+
 hostnames:
   # You can also specify a list in order of precedence for hostname variables.
   - private-ip-address
